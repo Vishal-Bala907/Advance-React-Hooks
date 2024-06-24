@@ -1,0 +1,146 @@
+body{
+  background-color: rgba(196, 196, 196, 0.603);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ @import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.formGroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.forminput{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26) ,
+    -5px -5px 10px rgba(255, 255, 255, 0.467) , 
+    
+   inset 2px 2px 6px rgba(0, 0, 0, 0.19) ,
+   inset -2px -2px 6px rgba(223, 217, 217, 0.582)
+  ;
+}
+.button:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.heading{
+   width: 90%;
+   height: 100%;
+   padding: 20px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(79, 123, 255);
+
+  box-shadow: 5px 5px 10px rgba(0, 5, 44, 0.452) ,
+    -5px -5px 10px rgba(90, 198, 241, 0.467) , 
+   inset 2px 2px 6px rgba(0, 0, 0, 0.19) ,
+   inset -2px -2px 6px rgba(86, 205, 249, 0.582)
+  ;
+
+  color: white;
+}
+
+.label{
+  font-weight: 100;
+  font-size: small;
+  margin-bottom: -8px;
+  margin-left: -180px;
+}
+.smalllabel{
+  margin-left: -220px;
+}
+
+input{
+  border-style: none;
+  background: transparent;
+  border-bottom: 1px solid;
+  outline: none;
+  width: 300px;
+  font-size: x-large;
+}
+
+input:hover{
+  background-color: rgba(255, 254, 254, 0.416);
+}
+
+.label, .smalllabel{
+  position: relative;
+}
+.label::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 1px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+.label:hover::after{
+  transform: scaleX(1);
+}
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 2px solid black;
+  margin-top: 20px;
+}
+.item{
+  position: relative;
+  z-index: 4;
+  padding: 10px 0;
+}
+.main{
+  width: 80%;
+  text-align: center;
+  background-color: beige;
+  font-weight: 600;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  
+}
+
+.main::after{
+  content: "";
+  background-color: rgb(88, 88, 88);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition:  1s;
+}
+
+
+
+.main:hover::after, .main .item:hover{
+  transform: scaleX(1);
+  color: white;
+}
